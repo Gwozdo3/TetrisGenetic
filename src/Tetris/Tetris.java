@@ -47,11 +47,8 @@ public class Tetris extends JFrame {
         while(true){
 
             score++;
-            repaint();
+            side.repaint();
         }
-
-
     }
-
 }
 

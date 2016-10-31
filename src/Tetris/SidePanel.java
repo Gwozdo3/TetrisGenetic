@@ -5,6 +5,8 @@ import java.awt.Dimension;
 
 import java.awt.Graphics;
 
+
+
 import javax.swing.*;
 
 public class SidePanel extends JPanel  {
@@ -40,12 +42,10 @@ public class SidePanel extends JPanel  {
 		 * Draw the outline.
 		 */
         g.setColor(Color.WHITE);
-        g.drawString(Integer.toString(tetris.score), 10, 10);
-
+        g.drawString("Points: ", 5, 10);
+        g.drawString(Integer.toString(tetris.score), 60, 10);
 
 
 
     }
-
-
 }

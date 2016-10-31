@@ -3,6 +3,10 @@ package Tetris;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel{
@@ -82,6 +86,25 @@ public class BoardPanel extends JPanel{
 		 */
         g.setColor(Color.WHITE);
         g.drawRect(0, 0, TILE_SIZE * COL_COUNT, TILE_SIZE * ROW_COUNT);
+
+
+
+        BufferedImage img = null;
+        try{
+            img = ImageIO.read(new File("Tile.png"));
+        }catch (IOException e){
+        }
+
+        for(int x = 0; x < COL_COUNT; x++) {
+            int xx = x* TILE_SIZE;
+            for (int y = 0; y < ROW_COUNT; y++) {
+
+                int yy = y * TILE_SIZE;
+
+                g.drawImage(img, xx, yy, null);
+
+            }
+        }
 
 
 
