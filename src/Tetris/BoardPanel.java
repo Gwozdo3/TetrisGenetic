@@ -1,8 +1,6 @@
 package Tetris;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -88,10 +86,9 @@ public class BoardPanel extends JPanel{
         g.drawRect(0, 0, TILE_SIZE * COL_COUNT, TILE_SIZE * ROW_COUNT);
 
 
-
         BufferedImage img = null;
         try{
-            img = ImageIO.read(new File("Tile.png"));
+            img = ImageIO.read(new File("Tile2.png"));
         }catch (IOException e){
         }
 
@@ -105,8 +102,5 @@ public class BoardPanel extends JPanel{
 
             }
         }
-
-
-
     }
 }
