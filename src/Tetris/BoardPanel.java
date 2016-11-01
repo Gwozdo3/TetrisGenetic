@@ -95,9 +95,7 @@ public class BoardPanel extends JPanel{
         for(int x = 0; x < COL_COUNT; x++) {
             int xx = x* TILE_SIZE;
             for (int y = 0; y < ROW_COUNT; y++) {
-
                 int yy = y * TILE_SIZE;
-
                 g.drawImage(img, xx, yy, null);
 
             }
